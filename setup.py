@@ -23,6 +23,8 @@ setup(name='po.scaffolds',
       entry_points="""\
       [pyramid.scaffold]
       start_project = po.scaffolds:ProjectTemplate
+      start_view = po.scaffolds:ViewTemplate
+      start_model = po.scaffolds:ModelTemplate
       """,
       )
 
