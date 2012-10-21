@@ -17,10 +17,12 @@ setup(name='po.scaffolds',
       long_description=README + '\n\n' +  CHANGES,
       packages=find_packages(),
       namespace_packages=("po",),
-      include_package_data=True,
+
       zip_safe=False,
       install_requires=requires,
       entry_points="""\
+      [pyramid.scaffold]
+      start_project = po.scaffolds:ProjectTemplate
       """,
       )
 

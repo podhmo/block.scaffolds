@@ -1,5 +1,5 @@
-from pyramid.scaffolds.template import PyramidTemplate
+from pyramid.scaffolds import PyramidTemplate
 
 class ProjectTemplate(PyramidTemplate):
     _template_dir = 'project'
-    summary = 'Project template'
+    summary = '-- po.scaffolds -- Project template'
