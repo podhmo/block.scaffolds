@@ -7,6 +7,7 @@ README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = [
+    'argparse',
     'pyramid',
     ]
 
@@ -14,15 +15,8 @@ setup(name='po.scaffolds',
       version='0.0',
       description='snippets for scaffolding',
       long_description=README + '\n\n' +  CHANGES,
-      classifiers=[
-        "Programming Language :: Python",
-        "Framework :: Pyramid",
-        ],
-      author='podhmo',
-      author_email='',
-      url='',
-      keywords='web wsgi bfg pylons pyramid scaffolds',
       packages=find_packages(),
+      namespace_packages=("po",),
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,
