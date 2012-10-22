@@ -11,9 +11,9 @@ class GetCoC(object):
             self._coc_file = coc_file
         self.opts = opts
 
-        values = self.find_toplevel_upper(start_point, opts)
+        values = self.find_toplevel_downer(start_point, opts)
         if values is None:
-            values = self.find_toplevel_downer(start_point, opts)
+            values = self.find_toplevel_upper(start_point, opts)
             if values is None:
                 raise RuntimeError("can't find toplevel from %s" % start_point)
         self.app_top, self.module_top, self.coc = values
