@@ -11,20 +11,20 @@ requires = [
     'pyramid',
     ]
 
-setup(name='po.scaffolds',
+setup(name='block.scaffolds',
       version='0.0',
       description='snippets for scaffolding',
       long_description=README + '\n\n' +  CHANGES,
       packages=find_packages(),
-      namespace_packages=("po",),
+      namespace_packages=("block",),
 
       zip_safe=False,
       install_requires=requires,
       entry_points="""\
       [pyramid.scaffold]
-      start_project = po.scaffolds:ProjectTemplate
-      start_view = po.scaffolds:ViewTemplate
-      start_model = po.scaffolds:ModelTemplate
+      start_project = block.scaffolds:ProjectTemplate
+      start_view = block.scaffolds:ViewTemplate
+      start_model = block.scaffolds:ModelTemplate
       """,
       )
 
