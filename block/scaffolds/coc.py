@@ -72,3 +72,25 @@ def find_toplevel_upper(cwd, opts=None, is_toplevel=is_toplevel):
     for f in candidates:
         if is_toplevel(f,opts):
             return f
+
+## name_convention
+def ucamel_from_sneak(sneak):
+    """axx_bxx_cxx => AxxBxxCxx"""
+    pass
+
+def lcamel_from_sneak(sneak):
+    """axx_bxx_cxx => axxBxxCxx"""
+    pass
+
+def sneak_from_ucamel(ucamel):
+    """AxxBxxCxx => axx_bxx_cxx"""
+
+def sneak_from_lcamel(lcamel):
+    """AxxBxxCxx => axx_bxx_cxx"""
+#
+def filepath_from_dotted(dotted, basedir=None):
+    """aaa.bbb.ccc => aaa/bbb/ccc or c:\aaa\bbb\ccc"""
+    pass
+
+def dotted_from_filepath(filepath, basemodule=None, basedir=None):
+    """aaa/bbb/ccc or c:\aaa\bbb\ccc => aaa.bbb.cc"""
